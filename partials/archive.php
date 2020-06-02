@@ -25,18 +25,23 @@ echo '<article class="module post-summary">';
 		//setup_be_title_nolink();
 
 		// AUTHOR
-		//setup_be_author_name();
-		//setup_be_author_by_name();
-		//setup_be_author_gravatar_by_name();
+		//setup_be_author();
+		//setup_be_author_nolink();
+		//setup_be_author_by();
+		//setup_be_author_by_nolink();
+		//setup_be_author_icon();
+		//setup_be_author_icon_nolink();
 		//setup_be_author_gravatar();
 		
 		// DATE
+		//setup_be_date();
 		//setup_be_date_mdy();
-		//setup_be_date_weekday_mdy();
+		//setup_be_date_day_mdy();
+		//setup_be_date_mdy_time();
 
 		// DATE & AUTHOR
-		setup_be_date_vbar_author_name();
-		//setup_be_date_by_author_name();
+		setup_be_dateauthor();
+		//setup_be_dateauthor_nolink();
 
 		// EXCERPT
 		setup_be_excerpt();

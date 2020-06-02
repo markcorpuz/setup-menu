@@ -124,10 +124,16 @@
 // setup_be_date_by_author_name();
 // setup_be_date_vbar_author_name();
 
-.items.date_vbar_author_name {
+.item.dateauthor {
+	font-size: 0.875rem;
 
-	.item.vbar {
-		font-size: 0.875rem;
+	a {
+		color: $grey_10;
+		text-decoration: none;
+
+		&:hover {
+			color: $highlight;
+		}
 	}
 
 	.module.post-summary & {
@@ -154,37 +160,5 @@
 			background-color: $highlight;
 		}
 
-	}
-}
-
-
-
-
-
-.items.meta {
-	.post-summary & {
-		font-size: 0.875rem;
-		margin-top: 1rem;
-	}
-}
-.item.date {
-	.post-summary & {}
-	.post-summary .items.meta & {}
-}
-
-
-// AUTHOR ICON
-
-.item.author.icon {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
-	img {
-		//display: inline;
-		border-radius: 50%;
-	}
-	.gravatar {
-		margin-right: 0.5rem;
 	}
 }
