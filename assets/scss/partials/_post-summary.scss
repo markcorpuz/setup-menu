@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200601 | assets/scss/partials/post-summary.scss
+/* SETUP-BE | 1.0.0 | 200603 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 
 
@@ -6,6 +6,8 @@
 //
 
 .module.post-summary {}
+.module.post-summary.x2 {}
+.module.post-summary.x3 {}
 
 
 // FEATURED IMAGE
@@ -52,6 +54,16 @@
 	}
 
 	.module.post-summary & {}
+	.module.post-summary.x2 & {}
+	.module.post-summary.x3 & {
+		font-size: 0.875rem;
+	}
+	.module.post-summary.x4 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
+	.module.post-summary.x5 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
 }
 
 
@@ -61,7 +73,8 @@
 // setup_be_title_nolink() {;
 
 .item.title {
-	font-size: 1.25rem;
+	//font-size: 1.25rem;
+	@include font-sizes( 1.125rem, 1.25rem );
 	font-weight: 500;
 	margin: 0;
 
@@ -75,6 +88,18 @@
 	}
 
 	.module.post-summary & {}
+	.module.post-summary.x2 & {
+		@include font-sizes( 1.25rem, 1.375rem, 1.5rem );
+	}
+	.module.post-summary.x3 & {
+		@include font-sizes( 1.5rem, 1.875rem, 2.25rem );
+	}
+	.module.post-summary.x4 & {
+		@include font-sizes( 2.25rem, 2.625rem, 3rem );
+	}
+	.module.post-summary.x5 & {
+		@include font-sizes( 3.25rem, 3.625rem, 4rem );
+	}
 }
 
 
@@ -104,6 +129,16 @@
 	font-size: 0.875rem;
 
 	.module.post-summary & {}
+	.module.post-summary.x2 & {}
+	.module.post-summary.x3 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
+	.module.post-summary.x4 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
+	.module.post-summary.x5 & {
+		@include font-sizes( 1rem, 1.125rem );
+	}
 }
 
 
@@ -116,6 +151,16 @@
 	font-size: 1rem;
 
 	.module.post-summary & {}
+	.module.post-summary.x2 & {}
+	.module.post-summary.x3 & {
+		@include font-sizes( 1rem, 1.125rem );
+	}
+	.module.post-summary.x4 & {
+		@include font-sizes( 1rem, 1.125rem );
+	}
+	.module.post-summary.x5 & {
+		@include font-sizes( 1.125rem, 1.25rem );
+	}
 }
 
 
@@ -138,6 +183,16 @@
 
 	.module.post-summary & {
 		margin-top: 1rem;
+	}
+	.module.post-summary.x2 & {}
+	.module.post-summary.x3 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
+	.module.post-summary.x4 & {
+		@include font-sizes( 0.875rem, 1rem );
+	}
+	.module.post-summary.x5 & {
+		@include font-sizes( 1rem, 1.125rem );
 	}
 }
 
