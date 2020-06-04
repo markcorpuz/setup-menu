@@ -128,7 +128,9 @@
 .item.date {
 	font-size: 0.875rem;
 
-	.module.post-summary & {}
+	.module.post-summary & {
+		margin-top: 1rem;
+	}
 	.module.post-summary.x2 & {}
 	.module.post-summary.x3 & {
 		@include font-sizes( 0.875rem, 1rem );
