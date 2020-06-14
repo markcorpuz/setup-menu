@@ -159,11 +159,11 @@ function setup_be_author_nolink() {
 	 */
 	function setup_be_author_icon() {
 		$id = get_the_author_meta( 'ID' );
-		echo '<div class="item author icon"><a class="item author avatar" href="' . get_author_posts_url( $id ) . '" aria-hidden="true" tabindex="-1">' . get_avatar( $id, 20 ) . '</a><a class="item author link" href="' . get_author_posts_url( $id ) . '">' . get_the_author() . '</a></div>';
+		echo '<div class="item author icon"><span><a class="item gravatar" href="' . get_author_posts_url( $id ) . '" aria-hidden="true" tabindex="-1">' . get_avatar( $id, 20 ) . '</a></span><span><a href="' . get_author_posts_url( $id ) . '">' . get_the_author() . '</a></span></div>';
 	}
 	function setup_be_author_icon_nolink() {
 		$id = get_the_author_meta( 'ID' );
-		echo '<div class="item author icon nolink"><span class="item author avatar">' . get_avatar( $id, 20 ) . '<span><span class="item author">' . get_the_author() . '</span></div>';
+		echo '<div class="item author icon"><span class="item author gravatar">' . get_avatar( $id, 20 ) . '<span><span class="item author">' . get_the_author() . '</span></div>';
 	}
 
 	/**
@@ -172,7 +172,7 @@ function setup_be_author_nolink() {
 	 */
 	function setup_be_author_gravatar() {
 		$id = get_the_author_meta( 'ID' );
-		echo '<a class="item author gravatar" href="' . get_author_posts_url( $id ) . '" aria-hidden="true" tabindex="-1">' . get_avatar( $id, 20 ) . '</a>';
+		echo '<div class="item author icon"><a class="item gravatar" href="' . get_author_posts_url( $id ) . '" aria-hidden="true" tabindex="-1">' . get_avatar( $id, 20 ) . '</a>';
 	}
 
 
@@ -211,7 +211,7 @@ function setup_be_date() {
  * 
  */
 function setup_be_dateauthor() {
-	echo '<div class="item dateauthor">' . get_the_date( 'M j, Y' ) . ' by <a class="item author link" href="' . get_author_posts_url( $id ) . '">' . get_the_author() . '</a></div>';
+	echo '<div class="item dateauthor">' . get_the_date( 'M j, Y' ) . ' by <a href="' . get_author_posts_url( get_the_ID() ) . '">' . get_the_author() . '</a></div>';
 }
 function setup_be_dateauthor_nolink() {
 	echo '<div class="item dateauthor nolink">' . get_the_date( 'M j, Y' ) . ' by ' . get_the_author() . '</div>';
