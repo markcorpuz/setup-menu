@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200513 | assets/scss/main.scss
+/* SETUP-BE | 1.0.1 | 200624 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // MAIN
@@ -28,6 +28,7 @@
 @import 	"ui/setup-be-100/margin-all";
 @import 	"ui/setup-be-100/padding";
 @import 	"ui/setup-be-100/padding-all";
+@import 	"ui/setup-be-100/spacer";
 @import 	"ui/setup-be-100/shadow";
 @import 	"block/setup-be-100/alignwide";
 @import 	"block/setup-be-100/cover";
@@ -35,7 +36,7 @@
 @import 	"block/setup-be-100/gallery";
 
 // GUIDES
-@import 	"guide/setup-be-100/label";
+//@import 	"guide/setup-be-100/label";
 
 // PLUGINS
 //@import 	"block-custom/setup-be-100/log";
