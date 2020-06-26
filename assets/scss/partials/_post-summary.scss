@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200606 | assets/scss/partials/post-summary.scss
+/* SETUP-BE | 1.0.1 | 200626 | assets/scss/partials/post-summary.scss
 ---------------------------------------------------------------------------------------------------- */
 
 
@@ -12,13 +12,12 @@
 .module.post-summary.x5 {}
 
 
-// FEATURED IMAGE
+// IMAGE
 //
 // setup_be_image();
 // setup_be_image_nolink();
 
 .item.image {
-
 	.module.post-summary & {
 		display: block;
 		margin-bottom: 1rem;
@@ -28,9 +27,32 @@
 		}
 	}
 }
+a.item.image.link {
+	.module.post-summary & {}
+}
 .item.img {
 	.module.post-summary & {
 		margin-bottom: 1rem;
+	}
+}
+
+// BGIMAGE
+//
+// setup_be_bgimage();
+// setup_be_bgimage_nolink();
+
+.item.bgimage {
+	.module.post-summary & {
+		display: block;
+		margin-bottom: 1rem;
+		background-size: cover;
+		background-position: center;
+		padding-top: calc(200 / 300 * 100%);
+	}
+}
+a.item.bgimage.link {
+	.module.post-summary & {
+		&:hover {}
 	}
 }
 

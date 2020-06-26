@@ -4,7 +4,7 @@
  *
  * @package      SETUP-BE
  * @author       Mark Corpuz
- * @since        1.0.0
+ * @since        1.0.1
  * @license      GPL-2.0+
 **/
 
@@ -13,6 +13,8 @@ echo '<article class="module post-summary">';
 	// FEATURED IMAGE
 	setup_be_image();
 	//setup_be_image_nolink();
+	//setup_be_bgimage();
+	//setup_be_bgimage_nolink();
 
 	echo '<div class="items info">';
 
