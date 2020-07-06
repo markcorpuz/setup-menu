@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.1 | 200701 | assets/scss/main.scss
+/* SETUP-BE | 1.0.1 | 200702 | assets/scss/main.scss
 ---------------------------------------------------------------------------------------------------- */
 
 // MAIN
@@ -36,8 +36,6 @@
 @import 	"block/setup-be-100/group";
 @import 	"block/setup-be-100/gallery";
 
-// GUIDES
-//@import 	"guide/setup-be-100/label";
-
 // PLUGINS
-//@import 	"block-custom/setup-be-100/log";
+@import 	"block-custom/setup-log-103/log";
+@import 	"block-custom/setup-log-103/guide";
