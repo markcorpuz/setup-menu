@@ -280,6 +280,18 @@ function setup_be_excerpt() {
 
 
 /**
+ * CONTENT
+ *
+ */
+function setup_be_content() {
+
+    if( the_content() ) {
+    	echo '<div class="item content">' . the_content() . '</div>';
+    }
+}
+
+
+/**
  * EDIT
  * 
  */
