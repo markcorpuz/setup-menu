@@ -64,8 +64,9 @@
  */
 
 function setup_be_image( $size = 'medium' ) {
+	$pid = get_the_ID();
 	if( !empty( setup_be_image_id() ) )
-		echo '<a class="item image link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( setup_be_image_id(), $size, "", ["class" => "item img"] ) . '</a>';
+		echo '<a class="item image link" href="' . get_the_permalink( $pid ) . '" tabindex="-1" aria-hidden="true">' . wp_get_attachment_image( setup_be_image_id(), $size, "", ["class" => "item img"] ) . '</a>';
 }
 function setup_be_image_nolink( $size = 'medium' ) {
 	if( !empty( setup_be_image_id() ) )
@@ -89,7 +90,7 @@ function setup_be_bgimage( $size = 'medium' ) {
 	// check if variable has content
 	if( !empty( $img_bg ) ) {
 		?>
-		<a class="item bgimage link" href="<?php get_permalink() ?>" tabindex="-1" aria-hidden="true"  style="background-image:url(<?php echo $img_bg; ?>);"></a>
+		<a class="item bgimage link" href="<?php echo get_the_permalink( $pid ); ?>" tabindex="-1" aria-hidden="true"  style="background-image:url(<?php echo $img_bg; ?>);"></a>
 		<?php
 	}
 }
@@ -117,7 +118,7 @@ function setup_be_bgimage_nolink( $size = 'medium' ) {
  * _NOLINK
  * 
  */
-function setup_be_bgimage_wtitle( $size = 'medium' , $text ) {
+function setup_be_bgimage_wtitle( $size = 'medium' , $text = '' ) {
 	$pid = get_the_ID();
 	// Native WP
 	$img_bg = get_the_post_thumbnail_url( $pid, $size );
@@ -132,7 +133,7 @@ function setup_be_bgimage_wtitle( $size = 'medium' , $text ) {
 		<?php
 	}
 }
-function setup_be_bgimage_wtitle_nolink( $size = 'medium' , $text ) {
+function setup_be_bgimage_wtitle_nolink( $size = 'medium' , $text = '' ) {
 	$pid = get_the_ID();
 	// Native WP
 	$img_bg = get_the_post_thumbnail_url( $pid, $size );
@@ -194,6 +195,9 @@ function setup_be_title_nolink() {
 	global $wp_query;
 	$tag = ( is_singular() || -1 === $wp_query->current_post ) ? 'h3' : 'h2';
 	echo '<' . $tag . ' class="item title nolink">' . get_the_title() . '</' . $tag . '>';
+}
+function setup_be_title_only() {
+	return get_the_title();
 }
 
 
