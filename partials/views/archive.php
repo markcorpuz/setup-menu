@@ -11,8 +11,12 @@
 echo '<article class="module post-summary">';
 
 	// FEATURED IMAGE
-	setup_be_image();
+	//setup_be_image();
 	//setup_be_image_nolink();
+	//setup_be_bgimage();
+	//setup_be_bgimage_nolink();
+	setup_be_bgimage_wtitle( 'large', setup_be_title_nolink() );
+	//setup_be_bgimage_wtitle_nolink();
 
 	echo '<div class="items info">';
 
@@ -48,7 +52,8 @@ echo '<article class="module post-summary">';
 		//setup_be_excerpt_maxwords();
 
 		// ADMIN
-		setup_be_edit();
+		//setup_be_edit();
+		setup_be_edit_date_modified();
 
 	echo '</div>';
 
