@@ -78,9 +78,8 @@ function setup_be_image_nolink( $size = 'medium' ) {
  * _NOLINK
  * 
  */
-function setup_be_bgimage() {
+function setup_be_bgimage( $size = 'medium' ) {
 	$pid = get_the_ID();
-	$size = 'medium';
 	// Native WP
 	$img_bg = get_the_post_thumbnail_url( $pid );
 	// Custom Field (ACF) - replace with actual field label
@@ -94,9 +93,8 @@ function setup_be_bgimage() {
 		<?php
 	}
 }
-function setup_be_bgimage_nolink() {
+function setup_be_bgimage_nolink( $size = 'medium' ) {
 	$pid = get_the_ID();
-	$size = 'medium';
 	// Native WP
 	$img_bg = get_the_post_thumbnail_url( $pid );
 	// Custom Field (ACF) - replace with actual field label
@@ -312,6 +310,29 @@ function setup_be_edit() {
 				// return edit_post_link( 'Edit' ); (OR)
 				// you might want to use the URL for other purposes
 				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT</a></div>';	
+			}
+		}
+	}
+}
+
+/**
+ * EDIT w DATE MODIFIED
+ * 
+ */
+
+function setup_be_edit_date_modified() {
+
+	// specify user privileges that can edit
+	$user_types = array( 'administrator', 'editor' );
+
+	// validate if user is logged in
+	if( is_user_logged_in() ) {
+
+		// what type of access
+		foreach( $user_types as $user_type ) {
+
+			if( current_user_can( $user_type ) ) {
+				echo '<div class="item edit"><a href="'.get_edit_post_link( get_the_ID() ).'">EDIT | '.get_the_modified_date( 'n.j.y' ).'</a></div>';
 			}
 		}
 	}
