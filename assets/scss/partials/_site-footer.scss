@@ -1,4 +1,4 @@
-/* SETUP-BE | 1.0.0 | 200422 | assets/scss/partials/site-footer.scss
+/* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/site-footer.scss
 ---------------------------------------------------------------------------------------------------- */
 
 /* Footer Widgets
@@ -6,28 +6,30 @@
 
 .footer-widgets {
 
+	position: relative;
+
+	// SPACING
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+
 	// BACKGROUND
 	background: brand-color( 'darkgrey' );
 
 	// COLOR
 	color: $white;
 
-	// SPACING
-	padding-top: 2rem;
-	padding-bottom: 1rem;
-
-	position: relative;
-
+	// LINK
 	a {
 		color: $white;
 		text-decoration: none;
 
 		&:hover {
-			color: brand-color( 'blue' );
+			color: $white;
 			text-decoration: underline;
 		}
 	}
 
+	// CONTENT
 	p {
 		> a {
 			text-decoration: underline;
