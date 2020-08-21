@@ -1,11 +1,12 @@
-/* SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/site-footer.scss
+/* SETUP-MENU | 1.0.2 | 200821 | assets/scss/partials/site-footer.scss
+// SETUP-BE | 1.0.2 | 200821 | assets/scss/partials/site-footer.scss
 ---------------------------------------------------------------------------------------------------- */
 
 .menu {
 
-	.sidebar-primary &,
+	.sidebar-primary & {}
 	.footer-widgets & {
-		//@extend %fontsize-smaller !optional;
+		@extend %fontsize-smaller !optional;
 	}
 }
 ul.menu {
@@ -16,7 +17,16 @@ ul.menu {
 }
 
 .menu-item {
+
 	&.menu-item-has-children {}
+
+	.sidebar-primary & {}
+	.footer-widgets & {
+		margin-bottom: 0.5rem;
+	}
+	.footer-widgets &:last-child {
+		margin-bottom: 0;
+	}
 }
 li.menu-item {}
 
@@ -25,8 +35,11 @@ li.menu-item {}
 	.sidebar-primary &,
 	.footer-widgets & {
 		margin-bottom: 0;
-		margin-left: 1rem;	}
-
+		margin-left: 1rem;
+	}
+	.footer-widgets & {
+		margin-top: 0.5rem;
+	}
 }
 ul.sub-menu {
 
